@@ -223,11 +223,11 @@ function yes(){
  $('#toast').textContent='บทต่อไปเริ่มแล้วนะ ♡';$('#toast').classList.add('show');
  setTimeout(()=>$('#toast').classList.remove('show'),2800);
 }
-const audio = new Audio('audio/07.%20i%20think%20about%20you%20all%20the%20time.flac');
+const audio = new Audio('audio/07.%20i%20think%20about%20you%20all%20the%20time.mp3');
 audio.preload = 'auto';
 audio.loop = true;
 audio.volume = 0.18;
-audio.addEventListener('error',()=>toast('ไฟล์เพลงไม่สามารถเล่นได้ในเว็บเบราว์เซอร์นี้ ลองใช้ Chrome/Edge หรือแปลงเป็น MP3'));
+audio.addEventListener('error',()=>toast('ไฟล์เพลงไม่โหลดได้ในเบราว์เซอร์นี้ กรุณาใช้ Chrome/Edge หรือใช้ไฟล์ MP3'));
 const volumeSlider = document.getElementById('volumeSlider');
 function setVolumeFromSlider(value){
  if(!audio)return;
